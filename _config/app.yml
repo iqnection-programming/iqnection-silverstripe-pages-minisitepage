@@ -1,0 +1,6 @@
+Page:
+  extensions:
+    - IQMinisite_Page
+Page_Controller:
+  extensions:
+    - IQMinisite_Page_Controller
