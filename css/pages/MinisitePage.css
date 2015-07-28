@@ -21,7 +21,7 @@
 #minisite_right					{ float:right; width:72%; }		
 
 @media (max-width:750px){
-	#minisite_sidebar			{ width:100%; margin:0 0 30px; float:none; }
+	#minisite_sidebar			{ width:100%; margin:0 0 30px; float:none; min-height:0px !important; }
 	#minisite_right				{ width:100%; float:none; }
 }	
 	
