@@ -9,13 +9,9 @@
 		
 		public function updateCMSFields(FieldList $fields)
 		{
-			if(count($this->getOwner()->Children()))
-			{
-				$fields->addFieldToTab('Root.Main', new FieldGroup("Minisite Layout", array(
-					new CheckboxField('ActivateMinisite','Activate'),
-				)), "Title");
-
-			}
+			$fields->addFieldToTab('Root.Main', new FieldGroup("Minisite Layout", array(
+				new CheckboxField('ActivateMinisite','Activate'),
+			)), "Title");
 			return $fields;
 		}
 		
