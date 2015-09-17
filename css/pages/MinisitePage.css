@@ -1,4 +1,4 @@
-#minisite_sidebar				{ float:left; width:26%; padding:2%; border:1px #e2e2e2 solid; margin:0;
+#minisite_sidebar				{ float:left; width:26%; padding:3%; border:1px #e2e2e2 solid; margin:0;
 								background: rgb(234,234,234); /* Old browsers */
 								background: -moz-linear-gradient(-45deg,  rgba(234,234,234,1) 0%, rgba(255,255,255,1) 50%, rgba(234,234,234,1) 100%); /* FF3.6+ */
 								background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
@@ -21,8 +21,8 @@
 
 #minisite_right					{ float:right; width:72%; }		
 
-@media (max-width:750px){
-	#minisite_sidebar			{ width:100%; margin:0 0 30px; float:none; min-height:0px !important; }
+@media (max-width:800px){
+	#minisite_sidebar			{ width:100%; margin:0 0 30px; float:none; min-height:0px !important; padding:3%; }
 	#minisite_right				{ width:100%; float:none; }
 }	
 	
