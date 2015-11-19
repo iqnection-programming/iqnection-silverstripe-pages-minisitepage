@@ -9,17 +9,15 @@
 		
 		public function updateCMSFields(FieldList $fields)
 		{
-			$fields->addFieldToTab('Root.Main', new FieldGroup("Minisite Layout", array(
-				new CheckboxField('ActivateMinisite','Activate'),
-			)), "Title");
+			if (!$fields->dataFieldByName('ActivateMinisite'))
+			{
+				$fields->addFieldToTab('Root.Main', new FieldGroup("Minisite Layout", array(
+					new CheckboxField('ActivateMinisite','Activate'),
+				)), "Title");
+			}
 			return $fields;
 		}
-		
-		public function updateSettingsFields(FieldList $fields)
-		{			
-			return $fields;
-		}
-		
+				
 	}
 	
 	class IQMinisite_Page_Controller extends Extension 
