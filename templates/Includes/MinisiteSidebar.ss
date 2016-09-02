@@ -1,6 +1,6 @@
 <% with MinisiteParent %>
 	<% if Children %>
-		<div id="minisite_sidebar">
+		<div id="minisite_sidebar" class="parent_sameheight">
 			<ul id="minisite_sidebar_nav">
 				<li class="minisite_title"><h2><a href="$Link">$Title</a></h2></li>
 			<% loop Children %>
