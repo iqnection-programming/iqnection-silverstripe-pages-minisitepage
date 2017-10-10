@@ -1,3 +1,8 @@
+---
+Name: iqminisite
+After:
+  - '#iqbasepages'
+---
 Page:
   extensions:
     - IQMinisite_Page

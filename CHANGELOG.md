@@ -2,6 +2,9 @@
 # Change Log
 
 
+## [1.0.3]
+- Added multi-level sidebar navigation to base build
+
 ## [1.0.2]
 - Bug fix on updateCMSFields being called multiple times if $this->extend() is used in getCMSFields()
 
