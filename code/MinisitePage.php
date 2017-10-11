@@ -68,4 +68,22 @@ class IQMinisite_Page_Controller extends Extension
 		}
 	}
 	
+	public function MinisiteParent($page=false)
+	{
+		$page = $page ? $page : $this->getOwner()->dataRecord;
+		if ($page->ActivateMinisite) 
+		{
+			return $page;
+		} 
+		elseif ($page->Parent() && $page->ID != 0) 
+		{
+			return $this->MinisiteParent($page->Parent());
+		} 
+		else 
+		{
+			return false;
+		}
+	}
+
+	
 }
