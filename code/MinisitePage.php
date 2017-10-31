@@ -16,11 +16,11 @@ class IQMinisite_Page extends Extension
 			$fields->addFieldToTab('Root.Main', $minisiteGroup = FieldGroup::create("Minisite Layout", array(
 				CheckboxField::create('ActivateMinisite', 'Activate as Minisite Parent')
 			)), "Title");
-			if ( ($this->ActivateMinisite) || ($this->MinisiteParent()) )
+			if ( ($this->owner->ActivateMinisite) || ($this->owner->MinisiteParent()) )
 			{
 				$minisiteGroup->push( CheckboxField::create('HideMinisiteSidebar','Hide Minisite Navigation') );
 			}
-			if ($this->ActivateMinisite)
+			if ($this->owner->ActivateMinisite)
 			{
 				$minisiteGroup->push( CheckboxField::create('ShowMultiLevelMinisite','Show Multi-Level Navigation') );
 			}
@@ -28,21 +28,17 @@ class IQMinisite_Page extends Extension
 		return $fields;
 	}
 	
-	public function MinisiteParent($page=false)
+	public function MinisiteParent()
 	{
-		$page = $page ? $page : $this->getOwner()->dataRecord;
-		if ($page->ActivateMinisite) 
+		if ($this->owner->ActivateMinisite) 
 		{
-			return $page;
+			return $this->owner;
 		} 
-		elseif ($page->Parent() && $page->ID != 0) 
+		elseif ($this->owner->Parent()->Exists())
 		{
-			return $this->MinisiteParent($page->Parent());
+			return $this->owner->Parent()->MinisiteParent();
 		} 
-		else 
-		{
-			return false;
-		}
+		return false;
 	}
 }
 
@@ -61,7 +57,7 @@ class IQMinisite_Page_Controller extends Extension
 				$backup_template = $backup_template."_".$action;
 			}
 			$this->owner->templates['index'] = array('MinisitePage', $page_template, $backup_template);
-			Requirements::css("iq-minisitepage/javascript/pages/MinisitePage.js");
+			Requirements::javascript("iq-minisitepage/javascript/pages/MinisitePage.js");
 			Requirements::javascript("themes/mysite/javascript/pages/MinisitePage.js");
 			Requirements::css("iq-minisitepage/css/pages/MinisitePage.css");
 			Requirements::css("themes/mysite/css/pages/MinisitePage.css");
