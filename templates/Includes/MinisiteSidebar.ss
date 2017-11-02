@@ -6,21 +6,21 @@
 				<h2>$MinisiteParent.Title</h2>
 			</li>
 			<% if $MinisiteParent.ClassName != HeadingPage %>
-				<li class="mobile"><a href="$MinisiteParent.Link" class="$MinisiteParent.LinkingMode">$MinisiteParent.Title</a></li>
+				<li class="mobile"><a href="$MinisiteParent.Link" class="$MinisiteParent.LinkingMode">$MinisiteParent.MenuTitle</a></li>
 			<% end_if %>
 			<% loop $MinisiteParent.Children %>
 				<% if $Children && $Parent.ShowMultiLevelMinisite %>
 					<li class="$LinkingMode children">
 						<span class="control"></span>
-						<a href="$Link" class="$LinkingMode">$Title</a>
+						<a href="$Link" class="$LinkingMode">$MenuTitle</a>
 						<ul>
 							<% loop $Children %>
-								<li><a href="$Link" class="$LinkingMode">$Title</a></li>
+								<li><a href="$Link" class="$LinkingMode">$MenuTitle</a></li>
 							<% end_loop %>
 						</ul>
 					</li>
 				<% else %>
-					<li class="$LinkingMode"><a href="$Link" class="$LinkingMode">$Title</a></li>
+					<li class="$LinkingMode"><a href="$Link" class="$LinkingMode">$MenuTitle</a></li>
 				<% end_if %>
 			<% end_loop %>
 		</ul><!--minisite_sidebar_nav-->
