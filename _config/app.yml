@@ -1,12 +1,12 @@
 ---
-Name: mysite
+Name: iqminisitepages
 After:
   - 'iq-basepages/*'
 ---
 Page:
   extensions:
-    - IQMinisite_Page
-Page_Controller:
+    - IqMinisitePageExtension
+PageController:
   extensions:
-    - IQMinisite_Page_Controller
+    - IqMinisitePageControllerExtension
 ---

@@ -1,8 +1,9 @@
 {
 	"name": "iqnection-pages/minisitepage",
-	"description": "SilverStripe 3 Minisite Page",
+	"description": "SilverStripe Minisite Page",
 	"type": "silverstripe-module",
 	"keywords": ["iqnection","pages"],
+	"license": "BSD-3-Clause",
 	"authors": [
 		{
 			"name": "IQnection",
@@ -10,8 +11,8 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": ">=3.0",
-		"iqnection-pages/basepages":"*"
+		"silverstripe/framework": "^4.0",
+		"iqnection-pages/basepages":"^2.0"
 	},
 	"extra": {
 		"installer-name": "iq-minisitepage"

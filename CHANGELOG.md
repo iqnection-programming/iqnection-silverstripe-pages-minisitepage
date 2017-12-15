@@ -1,6 +1,9 @@
-## Package: iqnection-silverstripe-3-pages-minisitepage
+## Package: iqnection-silverstripe-pages-minisitepage
 # Change Log
 
+
+## [2.0.0]
+- Updated for SilverStripe 4
 
 ## [1.0.3]
 - Added multi-level sidebar navigation to base build
