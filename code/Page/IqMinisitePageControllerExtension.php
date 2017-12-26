@@ -25,14 +25,20 @@ class IqMinisitePageControllerExtension extends Core\Extension
 	
 	public function updatePageCSS(&$files)
 	{
-		$files[] = '/css/pages/MinisitePage.css';
-		$files[] = '/css/pages/MinisitePage_extension.css';
+		if ($this->MinisiteParent()) 
+		{
+			$files[] = '/css/pages/MinisitePage.css';
+			$files[] = '/css/pages/MinisitePage_extension.css';
+		}
 	}
 	
 	public function updatePageJS(&$files)
 	{
-		$files[] = '/javascript/pages/MinisitePage.js';
-		$files[] = '/javascript/pages/MinisitePage_extension.js';
+		if ($this->MinisiteParent()) 
+		{
+			$files[] = '/javascript/pages/MinisitePage.js';
+			$files[] = '/javascript/pages/MinisitePage_extension.js';
+		}
 	}
 	
 	public function MinisiteParent($page=false)

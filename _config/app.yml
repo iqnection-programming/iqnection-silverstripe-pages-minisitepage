@@ -1,7 +1,5 @@
 ---
 Name: iqminisitepages
-After:
-  - 'iq-basepages/*'
 ---
 Page:
   extensions:
@@ -9,4 +7,8 @@ Page:
 PageController:
   extensions:
     - IqMinisitePageControllerExtension
+SilverStripe\Core\Manifest\ModuleManifest:
+  module_priority:
+    - iqnection-pages/minisitepage
+    - iqnection-pages/basepages
 ---

@@ -2,6 +2,9 @@
 # Change Log
 
 
+## [2.0.1]
+- Adjusted module priority so stylesheets, javascript, and templates are used in the required order
+
 ## [2.0.0]
 - Updated for SilverStripe 4
 
