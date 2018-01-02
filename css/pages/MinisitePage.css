@@ -28,6 +28,10 @@
 
 #minisite_sidebar_content							{ margin-top:30px; padding-top:30px; border-top:2px solid #ccc; }
 
+@media(min-width:801px){
+	#minisite_sidebar_nav > li						{ display:block !important; }
+}
+
 @media (max-width:800px){
 	#minisite_sidebar								{ width:100%; margin:0 0 30px; float:none; min-height:0px !important; padding:0; border:none;  border-bottom:1px solid #76b728; }
 	#minisite_right									{ width:100%; float:none; }
