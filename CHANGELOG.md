@@ -2,6 +2,10 @@
 # Change Log
 
 
+## [2.0.2]
+- improved template searching
+- css update
+
 ## [2.0.1]
 - Adjusted module priority so stylesheets, javascript, and templates are used in the required order
 

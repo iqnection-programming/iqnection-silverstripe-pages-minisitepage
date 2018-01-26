@@ -11,14 +11,29 @@ class IqMinisitePageControllerExtension extends Core\Extension
 		{
 			$action = $this->owner->request->param('Action');
 			$page_template = Core\ClassInfo::shortName($this->owner->dataRecord->getClassName());
-			$backup_template = 'Page';
+			$pageAncestry = array_reverse(SilverStripe\Core\ClassInfo::ancestry($page_template),true);
+			$checkTemplates = ['MinisitePage'];
 			if ($action) 
 			{
-				$page_template = $page_template."_".$action;
-				$backup_template = $backup_template."_".$action;
+				foreach($pageAncestry as $pageClassName)
+				{
+					$checkTemplates[] = $pageClassName."_".$action;
+					if ($pageClassName == 'Page')
+					{
+						break;
+					}
+				}
+			}
+			foreach($pageAncestry as $pageClassName)
+			{
+				$checkTemplates[] = $pageClassName;
+				if ($pageClassName == 'Page')
+				{
+					break;
+				}
 			}
 			$templates = $this->owner->__get('templates');
-			$templates['index'] = array('MinisitePage', $page_template, $backup_template);
+			$templates['index'] = $checkTemplates;
 			$this->owner->__set('templates',$templates);
 		}
 	}
