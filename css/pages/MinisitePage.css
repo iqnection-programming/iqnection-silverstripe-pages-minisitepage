@@ -24,7 +24,7 @@
 #minisite_sidebar_nav li.section .control:before	{ content:'\f056'; }
 #minisite_sidebar_nav li.closed .control:before		{ content:'\f055'; }
 #minisite_sidebar_nav .minisite_title .mcontrol		{ display:none; }
-#minisite_sidebar_nav .minisite_title .mcontrol:before	{ font-size:18px; margin:1px 10px 0 0; }
+#minisite_sidebar_nav .minisite_title .mcontrol:before	{ font-size:20px; margin:0px 10px 0 0; }
 
 #minisite_right										{ float:right; width:72%; }		
 
@@ -38,9 +38,9 @@
 	#minisite_sidebar								{ width:100%; margin:0 0 30px; float:none; min-height:0px !important; padding:0; border:none;  border-bottom:1px solid #76b728; }
 	#minisite_right									{ width:100%; float:none; }
 
-	#minisite_sidebar_nav li.minisite_title				{ display:block !important; border-bottom-color:transparent; }
+	#minisite_sidebar_nav li.minisite_title				{ display:block !important; border-bottom-color:transparent; position:relative; padding-left:30px; }
 	#minisite_sidebar_nav li.minisite_title.open		{ border-bottom-color:#ccc; }
-	#minisite_sidebar_nav li.minisite_title .mcontrol	{ display:block; }
+	#minisite_sidebar_nav li.minisite_title .mcontrol	{ display:block; position:absolute; top:0; right:0; bottom:0; left:0; }
 	#minisite_sidebar_nav li.minisite_title h2			{ font-size:20px; }
 	#minisite_sidebar_nav > li						{ display:none; }
 	#minisite_sidebar_content						{ border-top-width:1px; margin-top:0; padding-top:15px; }
