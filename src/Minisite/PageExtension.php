@@ -1,5 +1,7 @@
 <?php
 
+namespace IQnection\Minisite;
+
 use SilverStripe\ORM;
 use SilverStripe\Forms;
 use SilverStripe\Core;

@@ -2,6 +2,9 @@
 # Change Log
 
 
+## [2.1.0]
+- updated to follow SS 4.1 /public/ directory structure
+
 ## [2.0.2]
 - improved template searching
 - css update

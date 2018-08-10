@@ -11,10 +11,18 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "^4.0",
-		"iqnection-pages/basepages":"^2.0"
+		"silverstripe/framework": "^4.1",
+		"iqnection-pages/basepages":"^2.1"
 	},
 	"extra": {
-		"installer-name": "iq-minisitepage"
+		"expose": [
+			"css",
+			"javascript"
+		]
+	},
+	"autoload": {
+		"psr-4": {
+			"IQnection\\Minisite\\": "app/src/"
+		}
 	}
 }

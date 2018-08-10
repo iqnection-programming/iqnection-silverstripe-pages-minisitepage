@@ -3,10 +3,10 @@ Name: iqminisitepages
 ---
 Page:
   extensions:
-    - IqMinisitePageExtension
+    - IQnection\Minisite\PageExtension
 PageController:
   extensions:
-    - IqMinisitePageControllerExtension
+    - IQnection\Minisite\PageControllerExtension
 SilverStripe\Core\Manifest\ModuleManifest:
   module_priority:
     - iqnection-pages/minisitepage

@@ -1,5 +1,7 @@
 <?php
 
+namespace IQnection\Minisite;
+
 use SilverStripe\Core;
 use SilverStripe\View\Requirements;
 
