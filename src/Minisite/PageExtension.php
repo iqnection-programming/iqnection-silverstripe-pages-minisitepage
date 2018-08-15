@@ -6,9 +6,8 @@ use SilverStripe\ORM;
 use SilverStripe\Forms;
 use SilverStripe\Core;
 
-class IqMinisitePageExtension extends ORM\DataExtension
+class PageExtension extends ORM\DataExtension
 {
-	
 	private static $db = array(
 		"ActivateMinisite" => "Boolean",
 		'HideMinisiteSidebar' => 'Boolean',

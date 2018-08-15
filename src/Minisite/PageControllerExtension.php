@@ -5,7 +5,7 @@ namespace IQnection\Minisite;
 use SilverStripe\Core;
 use SilverStripe\View\Requirements;
 
-class IqMinisitePageControllerExtension extends Core\Extension
+class PageControllerExtension extends Core\Extension
 {
 	public function onAfterInit()
 	{
