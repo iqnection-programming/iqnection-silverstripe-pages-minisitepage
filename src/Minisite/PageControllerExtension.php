@@ -13,14 +13,14 @@ class PageControllerExtension extends Core\Extension
 		{
 			$action = $this->owner->request->param('Action');
 			$page_template = Core\ClassInfo::shortName($this->owner->dataRecord->getClassName());
-			$pageAncestry = array_reverse(SilverStripe\Core\ClassInfo::ancestry($page_template),true);
+			$pageAncestry = array_reverse(Core\ClassInfo::ancestry($this->owner->dataRecord->getClassName()),true);
 			$checkTemplates = ['MinisitePage'];
 			if ($action) 
 			{
 				foreach($pageAncestry as $pageClassName)
 				{
 					$checkTemplates[] = $pageClassName."_".$action;
-					if ($pageClassName == 'Page')
+					if ($pageClassName == \Page::class)
 					{
 						break;
 					}
@@ -29,7 +29,7 @@ class PageControllerExtension extends Core\Extension
 			foreach($pageAncestry as $pageClassName)
 			{
 				$checkTemplates[] = $pageClassName;
-				if ($pageClassName == 'Page')
+				if ($pageClassName == \Page::class)
 				{
 					break;
 				}
@@ -74,6 +74,4 @@ class PageControllerExtension extends Core\Extension
 			return false;
 		}
 	}
-
-	
 }

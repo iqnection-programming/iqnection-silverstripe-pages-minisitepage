@@ -1,4 +1,8 @@
-#minisite_sidebar									{ float:left; width:26%; padding:0 2% 0 0; border-right:2px solid #ccc; margin:0; }
+
+#minisite-layout									{ display:flex; justify-content:space-between; align-items:stretch; }
+#minisite-layout > *								{ display:block; width:100%; }
+#minisite-layout .minisite-sidebar					{ max-width:27%; padding:0 2% 0 0; border-right:2px solid #ccc; margin:0; }
+#minisite-layout .minisite-sidebar:after			{ content:"."; display:block; height:0; clear:both; zoom:1; visibility:hidden; }
 #minisite_sidebar_nav								{ list-style:none; display:block; padding:0; margin:0; }
 #minisite_sidebar_nav li							{ margin:15px 0 0; padding:0; }	
 #minisite_sidebar_nav > li:first-child				{ margin:0; }		
@@ -26,17 +30,19 @@
 #minisite_sidebar_nav .minisite_title .mcontrol		{ display:none; }
 #minisite_sidebar_nav .minisite_title .mcontrol:before	{ font-size:20px; margin:0px 10px 0 0; }
 
-#minisite_right										{ float:right; width:72%; }		
+#minisite-layout .minisite-content					{ max-width:70%; }
+#minisite-layout .minisite-content:after			{ content:"."; display:block; height:0; clear:both; zoom:1; visibility:hidden; }
 
-#minisite_sidebar_content							{ margin-top:30px; padding-top:30px; border-top:2px solid #ccc; }
+#minisite-layout .minisite-sidebar-content			{ margin-top:30px; padding-top:30px; border-top:2px solid #ccc; }
 
 @media(min-width:801px){
 	#minisite_sidebar_nav > li						{ display:block !important; }
 }
 
 @media (max-width:800px){
-	#minisite_sidebar								{ width:100%; margin:0 0 30px; float:none; min-height:0px !important; padding:0; border:none;  border-bottom:1px solid #76b728; }
-	#minisite_right									{ width:100%; float:none; }
+	#minisite-layout								{ flex-direction:column; }
+	#minisite-layout .minisite-sidebar				{ max-width:none; margin:0 0 30px; padding:0; border:none;  border-bottom:1px solid #76b728; }
+	#minisite-layout .minisite-content				{ max-width:none; }
 
 	#minisite_sidebar_nav li.minisite_title				{ display:block !important; border-bottom-color:transparent; position:relative; padding-left:30px; }
 	#minisite_sidebar_nav li.minisite_title.open		{ border-bottom-color:#ccc; }

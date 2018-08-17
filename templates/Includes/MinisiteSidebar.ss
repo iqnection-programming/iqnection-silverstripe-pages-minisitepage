@@ -1,5 +1,5 @@
 <% if $MinisiteParent.Children %>
-	<div id="minisite_sidebar" class="parent_sameheight">
+	<div class="minisite-sidebar">
 		<ul id="minisite_sidebar_nav">
 			<li class="minisite_title">
 				<span class="mcontrol"></span>
@@ -25,7 +25,7 @@
 			<% end_loop %>
 		</ul><!--minisite_sidebar_nav-->
 		<% if $SidebarContent && not $HideMinisiteSidebar %>
-			<div id="minisite_sidebar_content">
+			<div class="minisite-sidebar-content">
 				$SidebarContent
 			</div>
 		<% end_if %>

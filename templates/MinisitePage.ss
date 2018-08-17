@@ -2,17 +2,19 @@
 
     <% include Header %>
     
-    <div id="main_wrap" class="wrap">
-    	<div id="main">
+    <div id="main-wrap" class="wrap">
+    	<div id="main" class="inside">
         	<div id="page_type" class="internal minisite typography">
-            	<% if not $HideMinisiteSidebar %>
-					<% include MinisiteSidebar %>
-					<div id="minisite_right">
-				<% end_if %>
-	                    $Layout
-                <% if not $HideMinisiteSidebar %>
-					</div><!--minisite_right-->
-				<% end_if %>
+				<div id="minisite-layout">
+					<% if not $HideMinisiteSidebar %>
+						<% include MinisiteSidebar %>
+						<div class="minisite-content">
+							$Layout
+						</div>
+					<% else %>
+						$Layout
+					<% end_if %>
+				</div>
             </div>
         </div><!--main-->
     </div><!--main_wrap-->
