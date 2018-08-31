@@ -1,6 +1,8 @@
 ## Package: iqnection-silverstripe-pages-minisitepage
 # Change Log
 
+## [2.1.1]
+- updated with scss
 
 ## [2.1.0]
 - updated to follow SS 4.1 /public/ directory structure
