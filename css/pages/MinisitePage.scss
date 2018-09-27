@@ -10,8 +10,8 @@
 		&:first-child								{ margin:0; }
 	}
 	a												{ display:block; 
-		.current:hover								{ text-decoration:none !important; cursor:text; }
-		.current:before								{ content:'\f0da'; float:left; margin-left:-8px; font-family:FontAwesome; }			
+		&.current:hover								{ text-decoration:none !important; cursor:text; }
+		&.current:before							{ content:'\f0da'; float:left; margin-left:-8px; font-family:FontAwesome; }			
 	}
 	ul												{ padding-bottom:15px; border-bottom:1px solid #ccc; }
 	.minisite_title .mcontrol						{ display:none;

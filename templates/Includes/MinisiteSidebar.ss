@@ -5,7 +5,7 @@
 				<span class="mcontrol"></span>
 				<h2>$MinisiteParent.Title</h2>
 			</li>
-			<% if $MinisiteParent.ClassName != HeadingPage %>
+			<% if $MinisiteParent.ClassName != IQnection\HeadingPage\HeadingPage %>
 				<li class="mobile"><a href="$MinisiteParent.Link" class="$MinisiteParent.LinkingMode">$MinisiteParent.MenuTitle</a></li>
 			<% end_if %>
 			<% loop $MinisiteParent.Children %>
