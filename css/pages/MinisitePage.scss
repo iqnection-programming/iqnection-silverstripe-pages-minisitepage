@@ -43,12 +43,14 @@
 
 @media(min-width:801px){
 	#minisite_sidebar_nav > li						{ display:block !important; }
+	#minisite_sidebar_nav li.mobile					{ display:none !important; }
 }
 
 @media (max-width:800px){
 	#minisite-layout								{ flex-direction:column; 
 		.minisite-sidebar							{ max-width:none; margin:0 0 30px; padding:0; border:none;  border-bottom:1px solid #76b728; }
 		.minisite-content							{ max-width:none; }
+		.minisite-sidebar-content					{ border:none; padding-top:0; margin-top:20px; }
 	}
 
 	#minisite_sidebar_nav li						{
