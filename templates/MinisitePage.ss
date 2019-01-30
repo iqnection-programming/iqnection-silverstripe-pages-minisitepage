@@ -7,10 +7,10 @@
         	<div id="page_type" class="internal minisite typography">
 				<div id="minisite-layout">
 					<% if not $HideMinisiteSidebar %>
-						<% include MinisiteSidebar %>
 						<div class="minisite-content">
 							$Layout
 						</div>
+						<% include MinisiteSidebar %>
 					<% else %>
 						$Layout
 					<% end_if %>

@@ -14,9 +14,6 @@
 		&.current:before							{ content:'\f0da'; float:left; margin-left:-8px; font-family:FontAwesome; }			
 	}
 	ul												{ padding-bottom:15px; border-bottom:1px solid #ccc; }
-	.minisite_title .mcontrol						{ display:none;
-		&:before									{ font-size:20px; margin:0px 10px 0 0; }
-	}
 }
 								
 #minisite_sidebar_nav li							{
@@ -25,9 +22,7 @@
 	ul												{ display:none; list-style:none; padding-left:10px; }
 	&.current ul,
 	&.section ul									{ display:block; }
-	.mcontrol:before,
 	.control:before									{ display:inline-block; float:left; margin:0 0 0 -18px; font-family:FontAwesome; content:'\f055'; font-size:14px; cursor:pointer; }
-	&.open .mcontrol:before,
 	&.open .control:before,
 	&.current .control:before,
 	&.section .control:before						{ content:'\f056'; }
@@ -42,6 +37,7 @@
 #minisite-layout .minisite-sidebar-content			{ margin-top:30px; padding-top:30px; border-top:2px solid #ccc; }
 
 @media(min-width:801px){
+	#minisite-layout								{ flex-direction:row-reverse; }
 	#minisite_sidebar_nav > li						{ display:block !important; }
 	#minisite_sidebar_nav li.mobile					{ display:none !important; }
 }
@@ -56,12 +52,9 @@
 	#minisite_sidebar_nav li						{
 		&.minisite_title							{ display:block !important; border-bottom-color:transparent; position:relative; padding-left:30px; }
 		&.minisite_title.open						{ border-bottom-color:#ccc; }
-		&.minisite_title .mcontrol					{ display:block; position:absolute; top:0; right:0; bottom:0; left:0; }
 		&.minisite_title h2							{ font-size:20px; }
-		.mcontrol:before, 
 		.control:before								{ margin-left:0; }
 	}
-	#minisite_sidebar_nav > li						{ display:none; }
 	#minisite_sidebar_content						{ border-top-width:1px; margin-top:0; padding-top:15px; }
 	#minisite_sidebar_nav > li:last-child			{ margin-bottom:20px; }
 	#minisite_sidebar_nav a							{ padding-left:20px; }

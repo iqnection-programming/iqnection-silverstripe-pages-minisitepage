@@ -3,6 +3,7 @@
 
 ## [2.1.2]
 - Updated to match basepages sidebar updates
+- Moved minisite navigation to bottom of page on mobile
 
 ## [2.1.1]
 - updated with scss

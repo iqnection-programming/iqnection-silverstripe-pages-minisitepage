@@ -2,7 +2,6 @@
 	<div class="minisite-sidebar">
 		<ul id="minisite_sidebar_nav">
 			<li class="minisite_title">
-				<span class="mcontrol"></span>
 				<h2>$MinisiteParent.Title</h2>
 			</li>
 			<% if $MinisiteParent.ClassName != IQnection\HeadingPage\HeadingPage %>
