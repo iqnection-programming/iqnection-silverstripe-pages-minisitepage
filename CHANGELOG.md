@@ -1,7 +1,7 @@
 ## Package: iqnection-silverstripe-pages-minisitepage
 # Change Log
 
-## [2.1.2]
+## [2.2.0]
 - Updated to match basepages sidebar updates
 - Moved minisite navigation to bottom of page on mobile
 
