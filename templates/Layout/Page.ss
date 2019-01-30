@@ -1,6 +1,6 @@
 
 <%-- Is there sidebar content --%>
-<% if $SidebarContent %>
+<% if $ShowSidebar %>
 
 	<%-- should we display the minisite sidebar --%>
 	<% if not $MinisiteParent || $HideMinisiteSidebar %>
@@ -13,7 +13,7 @@
 				<% include Page_columns %>
 			</section>
 			<section id="page_right">
-				$SidebarContent
+				<% include PageSidebar %>
 			</section>
 		</div>
 		

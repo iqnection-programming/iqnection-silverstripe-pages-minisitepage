@@ -1,6 +1,9 @@
 ## Package: iqnection-silverstripe-pages-minisitepage
 # Change Log
 
+## [2.1.2]
+- Updated to match basepages sidebar updates
+
 ## [2.1.1]
 - updated with scss
 
