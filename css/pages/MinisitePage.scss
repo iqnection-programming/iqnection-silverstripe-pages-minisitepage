@@ -10,7 +10,8 @@
 		&:first-child								{ margin:0; }
 	}
 	a												{ display:block;
-		&.current									{ font-weight:700; }
+		&.current,
+		&.section									{ font-weight:700; }
 		&.current:hover								{ text-decoration:none !important; cursor:text; }
 	}
 	ul												{ padding-bottom:15px; border-bottom:1px solid #ccc; }
