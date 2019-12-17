@@ -58,20 +58,16 @@ class PageControllerExtension extends Core\Extension
 		}
 	}
 	
-	public function MinisiteParent($page=false)
+	public function MinisiteParent()
 	{
-		$page = $page ? $page : $this->getOwner()->dataRecord;
-		if ($page->ActivateMinisite) 
+		if ($this->owner->ActivateMinisite) 
 		{
-			return $page;
+			return $this->owner;
 		} 
-		elseif ($page->Parent() && $page->ID != 0) 
+		elseif ( ($this->owner->Parent()->Exists()) && ($this->owner->Parent()->hasMethod('MinisiteParent')) )
 		{
-			return $this->MinisiteParent($page->Parent());
+			return $this->owner->Parent()->MinisiteParent();
 		} 
-		else 
-		{
-			return false;
-		}
+		return false;
 	}
 }
