@@ -1,6 +1,7 @@
 ## Package: iqnection-silverstripe-pages-minisitepage
 # Change Log
 
+
 ## [2.2.1]
 - Code improvements
 

@@ -7,9 +7,14 @@ use SilverStripe\View\Requirements;
 
 class PageControllerExtension extends Core\Extension
 {
+	public function showMinisite()
+	{
+		return ( ($this->MinisiteParent()) && (!$this->owner->HideMinisiteSidebar) );
+	}
+	
 	public function onAfterInit()
 	{
-		if ($this->MinisiteParent()) 
+		if ($this->showMinisite()) 
 		{
 			$action = $this->owner->request->param('Action');
 			$page_template = Core\ClassInfo::shortName($this->owner->dataRecord->getClassName());
@@ -42,7 +47,7 @@ class PageControllerExtension extends Core\Extension
 	
 	public function updatePageCSS(&$files)
 	{
-		if ($this->MinisiteParent()) 
+		if ($this->showMinisite()) 
 		{
 			$files[] = '/css/pages/MinisitePage.css';
 			$files[] = '/css/pages/MinisitePage_extension.css';
@@ -51,7 +56,7 @@ class PageControllerExtension extends Core\Extension
 	
 	public function updatePageJS(&$files)
 	{
-		if ($this->MinisiteParent()) 
+		if ($this->showMinisite()) 
 		{
 			$files[] = '/javascript/pages/MinisitePage.js';
 			$files[] = '/javascript/pages/MinisitePage_extension.js';
